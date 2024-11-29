@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotelreservation.view.RoomManagementViewController" stylesheets="@styles.css">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <TableView fx:id="roomsTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="roomNumberColumn" text="Room Number"/>
+            <TableColumn fx:id="roomTypeColumn" text="Room Type"/>
+            <TableColumn fx:id="roomPriceColumn" text="Room Price"/>
+            <TableColumn fx:id="availabilityColumn" text="Availability"/>
+        </columns>
+    </TableView>
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="Room Number:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="roomNumberField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Room Type:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <ComboBox fx:id="roomTypeComboBox" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Room Price:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="roomPriceField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="Availability:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <CheckBox fx:id="availabilityCheckBox" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Add Room" onAction="#handleAddRoom"/>
+        <Button text="Update Room" onAction="#handleUpdateRoom"/>
+        <Button text="Delete Room" onAction="#handleDeleteRoom"/>
+    </HBox>
+</VBox>

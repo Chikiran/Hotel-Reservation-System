@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotelreservation.view.MainViewController" stylesheets="@styles.css">
+   <top>
+      <VBox spacing="10">
+         <MenuBar>
+            <menus>
+               <Menu mnemonicParsing="false" text="File">
+                  <items>
+                     <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+               </Menu>
+               <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                     <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+               </Menu>
+            </menus>
+         </MenuBar>
+         <HBox spacing="10" alignment="CENTER_LEFT">
+            <padding>
+               <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Search:" />
+            <TextField fx:id="searchField" promptText="Enter search term" HBox.hgrow="ALWAYS" />
+            <Button fx:id="newReservationButton" text="New Reservation" onAction="#handleNewReservation" />
+            <Button fx:id="manageRoomsButton" text="Manage Rooms" onAction="#handleManageRooms" />
+         </HBox>
+      </VBox>
+   </top>
+   <center>
+      <TableView fx:id="reservationsTable" prefHeight="400.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="roomNumberColumn" prefWidth="75.0" text="Room Number" />
+          <TableColumn fx:id="roomStateColumn" prefWidth="75.0" text="Room State" />
+          <TableColumn fx:id="roomTypeColumn" prefWidth="75.0" text="Room Type" />
+          <TableColumn fx:id="guestNameColumn" prefWidth="100.0" text="Guest Name" />
+          <TableColumn fx:id="voucherNumberColumn" prefWidth="75.0" text="Voucher No." />
+          <TableColumn fx:id="inDateColumn" prefWidth="75.0" text="Check-in Date" />
+          <TableColumn fx:id="outDateColumn" prefWidth="75.0" text="Check-out Date" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

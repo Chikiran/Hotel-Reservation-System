@@ -1,0 +1,53 @@
+
+.root {
+    -fx-font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    -fx-background-color: #f0f0f0;
+}
+
+.button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.button:hover {
+    -fx-background-color: #45a049;
+}
+
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f8f8f8;
+    -fx-border-color: #ddd;
+    -fx-border-width: 0 0 1 0;
+}
+
+.text-field, .combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1;
+    -fx-border-radius: 3;
+}
+
+.label {
+    -fx-font-weight: bold;
+}
+
+#searchField {
+    -fx-pref-width: 200;
+}
+
+#newReservationButton, #manageRoomsButton {
+    -fx-background-color: #008CBA;
+}
+
+#newReservationButton:hover, #manageRoomsButton:hover {
+    -fx-background-color: #007B9A;
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotelreservation.view.BookingDetailsViewController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="Booking ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label fx:id="bookingIdLabel" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Room Number:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label fx:id="roomNumberLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Guest Name:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Label fx:id="guestNameLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label text="Check-in Date:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Label fx:id="checkInDateLabel" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <Label text="Check-out Date:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <Label fx:id="checkOutDateLabel" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+        <Label text="Special Preference:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <TextField fx:id="specialPreferenceField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+        <Label text="Payment Status:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+        <Label fx:id="paymentStatusLabel" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+        <Label text="Booking Status:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+        <Label fx:id="bookingStatusLabel" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="editButton" text="Edit" onAction="#handleEdit" />
+        <Button fx:id="saveButton" text="Save" onAction="#handleSave" visible="false" />
+        <Button text="Close" onAction="#handleClose" />
+    </HBox>
+</VBox>
